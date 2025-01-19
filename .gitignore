@@ -1,0 +1,26 @@
+# Node.js dependencies
+/backend/node_modules/
+/frontend/node_modules/
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+
+# MongoDB local data files (if using local MongoDB setup)
+*.lock
+data/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# IDE configuration files (if applicable)
+.idea/
+.vscode/
+
+# Operating system files
+*.swp
