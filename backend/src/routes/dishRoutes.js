@@ -18,17 +18,21 @@ router.post("/add", async (req, res) => {
     res.status(201).json({ message: "Dish added successfully", dish: newDish });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Error adding dish", error: error.message });
+    res
+      .status(500)
+      .json({ message: "Error adding dish", error: error.message });
   }
 });
 
 router.get("/", async (req, res) => {
   try {
     const dishes = await Dish.find();
-    res.status(200).json(dishes);
+    res.status(200).json(dishes); // Send all dishes as a JSON response
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Error fetching dishes", error: error.message });
+    res
+      .status(500)
+      .json({ message: "Error fetching dishes", error: error.message });
   }
 });
 
